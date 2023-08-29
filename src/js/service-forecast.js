@@ -18,6 +18,7 @@ function serviceForecast(city) {
 
       return response.json();
     })
+    .then(data => data.forecast.forecastday)
     .catch(error => Notiflix.Notify.failure(error.message));
 }
 
