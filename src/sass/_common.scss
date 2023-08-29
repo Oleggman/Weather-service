@@ -9,6 +9,7 @@ body {
 }
 
 .forecast-form {
+    position: relative;
     display: block;
     width: 350px;
     padding: 15px;
@@ -146,4 +147,32 @@ body {
         0 -1px 0 #fff,
         0 1px 0 #2e2e2e,
         0 2px 2px rgba(0, 0, 0, 0.9);
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.loader {
+    position: absolute;
+    top: 56%;
+    right: 10%;
+    width: 40px;
+    height: 40px;
+    border: 5px solid;
+    border-color: #FF3D00 transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
