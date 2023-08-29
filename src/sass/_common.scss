@@ -5,6 +5,66 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
+    background-color: rgb(117, 171, 221);
+}
+
+.forecast-form {
+    display: block;
+    width: 350px;
+    padding: 15px;
+    background-color: #c8dcff;
+    margin: 50px auto;
+    border-radius: 5px;
+
+    box-shadow: -1px -1px 8px 8px rgba(0, 0, 0, 0.71) inset;
+        -webkit-box-shadow: -1px -1px 8px 8px rgba(0, 0, 0, 0.71) inset;
+        -moz-box-shadow: -1px -1px 8px 8px rgba(0, 0, 0, 0.71) inset;
+}
+
+.form-label {
+    display: inline-block;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+}
+
+.label-text {
+    font-style: 20px;
+    color: #E91E63;
+    text-shadow: rgb(255, 0, 85) 1px 0 10px;;
+}
+
+.city-input {
+    appearance: none;
+    border: none;
+    outline: none;
+    border-bottom: .2em solid #E91E63;
+    background: rgba(#E91E63, .2);
+    border-radius: .2em .2em 0 0;
+    padding: .4em;
+    color: #E91E63;
+}
+
+.search-btn {
+    display: block;
+    margin: 0 auto;
+    appearance: none;
+    border: .2em solid #E91E63;
+    background: hsl(0 0 0/0);
+    padding: 10px 20px;
+    color: #E91E63;
+    border-radius: 2em;
+    transition: 0.5s;
+    cursor: pointer;
+    
+    &:hover,
+    &:focus,
+    &:active {
+        background: #E91E63;
+        color: #fff;
+    }
 }
 
 .forecast {
@@ -13,11 +73,12 @@ body {
     align-items: center;
     gap: 20px;
     flex-wrap: wrap;
+    margin-bottom: 100px;
 }
 
 .card {
     width: 300px;
-    height: 250px;
+    min-height: 250px;
     border-radius: 10%;
     background-color: rgba(50, 56, 74, 0.4);
     backdrop-filter: blur(3px);

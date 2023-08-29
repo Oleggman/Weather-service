@@ -9,8 +9,11 @@
   </head>
   <body>
     <form class="forecast-form" action="submit">
-      <input class="city-input" type="text" name="city" required />
-      <button type="submit">Forecast</button>
+      <label class="form-label">
+        <span class="label-text">Enter city</span>
+        <input class="city-input" type="text" name="city" required />
+      </label>
+      <button class="search-btn" type="submit">Forecast</button>
     </form>
 
     <div class="forecast"></div>
