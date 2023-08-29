@@ -1,3 +1,5 @@
+import Notiflix from 'notiflix';
+
 const API_URL = 'http://api.weatherapi.com/v1/forecast.json';
 const API_KEY = '204c4f35cbd541579f7122042232908';
 
@@ -8,13 +10,15 @@ function serviceForecast(city) {
     days: 14,
   });
 
-  return fetch(`${API_URL}?${params}`).then(response => {
-    if (!response.ok) {
-      throw new Error(response.statusText);
-    }
+  return fetch(`${API_URL}?${params}`)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(response.statusText);
+      }
 
-    return response.json();
-  });
+      return response.json();
+    })
+    .catch(error => Notiflix.Notify.failure(error.message));
 }
 
 export { serviceForecast };
