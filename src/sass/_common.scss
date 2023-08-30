@@ -78,6 +78,7 @@ body {
 }
 
 .card {
+    position: relative;
     width: 300px;
     min-height: 250px;
     border-radius: 10%;
@@ -90,12 +91,27 @@ body {
 .thumb {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 67px;
     background-color: rgba(27, 32, 49, 0.6);
     border-radius: 50%;
 }
 
-.city {
+.day-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(27, 32, 49, 0.6);
+    border-radius: 50%;
+}
+
+.city,
+.day-label {
     margin-top: 0;
     font-size: 28px;
     text-transform: uppercase;

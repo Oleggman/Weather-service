@@ -18,6 +18,8 @@ function convertDate(strDate) {
   return monthNames[date.getMonth()] + ', ' + date.getDate();
 }
 
+let day = 1;
+
 function renderForecast(data, city) {
   return data
     .map(
@@ -27,6 +29,7 @@ function renderForecast(data, city) {
             <img src="${item.day.condition.icon}" alt="${
         item.day.condition.text
       }" />
+        <span class="day-label">${day++}</span>
         </div>
         <div class="card-info">
             <h2 class="city">${city.toUpperCase()}</h2>

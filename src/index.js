@@ -1,6 +1,5 @@
 import { serviceForecast } from './js/service-forecast';
 import { renderForecast } from './js/render-forecast';
-import Notiflix from 'notiflix';
 
 const refs = {
   form: document.querySelector('.forecast-form'),
@@ -19,7 +18,7 @@ function onSearchForecast(evt) {
 
   serviceForecast(city)
     .then(data => (refs.container.innerHTML = renderForecast(data, city)))
-    .catch(error => Notiflix.Notify.failure(error.message))
+    .catch(console.log)
     .finally(() => {
       evt.target.reset();
       refs.loader.classList.add('hidden');
