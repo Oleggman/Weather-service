@@ -1,3 +1,23 @@
+const monthNames = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December',
+];
+
+function convertDate(strDate) {
+  const date = new Date(strDate);
+  return monthNames[date.getMonth()] + ', ' + date.getDate();
+}
+
 function renderForecast(data, city) {
   return data
     .map(
@@ -10,8 +30,8 @@ function renderForecast(data, city) {
         </div>
         <div class="card-info">
             <h2 class="city">${city.toUpperCase()}</h2>
-            <p class="date">${item.date}</p>
-            <p class="temp">${item.day.maxtemp_c}&#8451;</p>
+            <p class="date">${convertDate(item.date)}</p>
+            <p class="temp">${Math.floor(item.day.maxtemp_c)}&#8451;</p>
             <div class="min-max-temp">
               <p class="min-temp">Min: ${item.day.mintemp_c}&#8451;</p>
               <p class="max-temp">Max: ${item.day.maxtemp_c}&#8451;</p>
