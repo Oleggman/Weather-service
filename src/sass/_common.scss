@@ -48,9 +48,31 @@ body {
     color: #E91E63;
 }
 
+.form-options {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.days-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.days-select {
+    width: 85px;
+    padding: 5px 0;
+    outline: none;
+    border: 2px solid #E91E63;
+    border-radius: 8px;
+    color: #E91E63;
+}
+
 .search-btn {
     display: block;
-    margin: 0 auto;
+    margin: 0;
     appearance: none;
     border: .2em solid #E91E63;
     background: hsl(0 0 0/0);
@@ -170,7 +192,6 @@ body {
 }
 
 .loader {
-    position: absolute;
     top: 56%;
     right: 10%;
     width: 40px;

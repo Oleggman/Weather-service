@@ -18,9 +18,8 @@ function convertDate(strDate) {
   return monthNames[date.getMonth()] + ', ' + date.getDate();
 }
 
-let day = 1;
-
 function renderForecast(data, city) {
+  let day = 1;
   return data
     .map(
       item => `
